@@ -14,7 +14,7 @@ echo "[triggerEmulation] .... L1 emulator  = $L1EMULATOR"
 echo "[triggerEmulation] .... era          = $ERA"
 echo "[triggerEmulation] ##########################"
 
-LIMIT=1
+LIMIT=100
 
 rm -rf macroLogs
 rm -rf myGets
