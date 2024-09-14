@@ -28,7 +28,7 @@ mkdir logs
 
 for((i=1; i <= LIMIT; i++)) ; do
 
-    FILEPATH_i="/store/group/phys_heavyions/cbennett/crabSubmit_RAW_PYTHIA8_DiJet_5360GeV_2024-09-12/PYTHIA8_DiJet_5360GeV/PYTHIA8_DiJet_5360GeV_MC_generation_2024-09-12/240912_184339/0000/PYTHIA8_DiJet_5360GeV_RAW_%i.root"
+    FILEPATH_i="/store/group/phys_heavyions/cbennett/crabSubmit_RAW_PYTHIA8_DiJet_5360GeV_2024-09-12/PYTHIA8_DiJet_5360GeV/PYTHIA8_DiJet_5360GeV_MC_generation_2024-09-12/240912_184339/0000/PYTHIA8_DiJet_5360GeV_RAW_$i.root"
 
     echo "[triggerEmulation] Setting up configuration for file $i..."
 
