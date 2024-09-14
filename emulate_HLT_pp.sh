@@ -44,11 +44,11 @@ process = cms.Process("HLTANA")
 
 # Input source
 process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(-1))
-process.source = cms.Source("PoolSource", fileNames = cms.untracked.vstring("file:output.root"))
+process.source = cms.Source("PoolSource", fileNames = cms.untracked.vstring("file:output_130.root"))
 
 process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_cff")
 from Configuration.AlCa.GlobalTag import GlobalTag
-process.GlobalTag = GlobalTag(process.GlobalTag, "auto:phase1_2023_realistic_hi", "")
+process.GlobalTag = GlobalTag(process.GlobalTag, "140X_mcRun3_2024_realistic_v9", "")
 
 # add HLTBitAnalyzer
 process.load("HeavyIonsAnalysis.EventAnalysis.hltanalysis_cfi")
