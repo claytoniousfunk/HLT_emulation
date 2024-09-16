@@ -7,9 +7,9 @@ GLOBALTAG="140X_mcRun3_2024_realistic_v9"
 
 echo "cmsrel ..."
 
-cmsrel CMSSW_14_0_0
+cmsrel CMSSW_14_0_9_MULTIARCHS
 
-cd CMSSW_14_0_0/src
+cd CMSSW_14_0_9_MULTIARCHS/src
 
 cmsenv
 
