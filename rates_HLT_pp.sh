@@ -47,7 +47,7 @@ edmConfigDump hlt.py > hlt_config.py
 
 echo "file list replace ..."
 
-sed -i 's/list_cff/list_cff_HIon2/' run_steamflow_cfg.py
+sed -i 's/list_cff/list_cff_HIon2_Run3/' run_steamflow_cfg.py
 
 echo "make output dir ..."
 
