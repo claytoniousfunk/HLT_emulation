@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TRIGGERMENU="/dev/CMSSW_14_0_0/PRef/V107"
+TRIGGERMENU="/users/cbennett/140X/HLT_ppRef_140X/V2"
 GLOBALTAG="140X_mcRun3_2024_realistic_v9"
 L1MENU="L1Menu_CollisionsPPRef2024_v0_0_0.xml"
 L1EMULATOR="uGT"
