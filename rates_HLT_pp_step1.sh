@@ -41,7 +41,7 @@ cd SteamRatesEdmWorkflow/Prod/
 
 echo "creating config ..."
 
-hltGetConfiguration $HLT_MENU --data --process MYHLT --type GRun --prescale HIon --globaltag $GLOBALTAG --max-events -1 --l1Xml $L1_MENU --customise HLTrigger/Configuration/customizeHLTforCMSSW.customiseFor2018Input > hlt.py
+hltGetConfiguration $HLT_MENU --mc --process MYHLT --unprescale --globaltag $GLOBALTAG --max-events -1 --l1Xml $L1_MENU --customise HLTrigger/Configuration/customizeHLTforCMSSW.customiseFor2018Input > hlt.py
 
 edmConfigDump hlt.py > hlt_config.py
 
