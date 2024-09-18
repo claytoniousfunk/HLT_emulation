@@ -89,7 +89,7 @@ i=0
 #for((i=1; i <= LIMIT; i++)) ; do
 for value in "${files[@]}"; do
 
-    i=i+1
+    let "i=i+1"
     FILEPATH_i="$value"
 
     echo "[triggerEmulation] Setting up configuration for file $i..."
