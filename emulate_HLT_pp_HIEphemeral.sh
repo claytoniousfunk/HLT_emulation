@@ -84,7 +84,7 @@ mkdir myGets
 mkdir openHLTfiles
 mkdir logs
 
-i=0
+#i=0
 
 #for((i=1; i <= LIMIT; i++)) ; do
 for value in "${files[@]}"; do
