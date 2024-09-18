@@ -23,7 +23,7 @@ echo "[triggerEmulation] ##########################"
 #LIMIT=100
 #LIMIT=1 # for testing
 LIMIT=${#files[@]}   # loop through length of files array
-
+echo "number of files to emulate : $LIMIT"
 
 rm -rf macroLogs
 rm -rf myGets
