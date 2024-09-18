@@ -40,7 +40,7 @@ for((i=1; i <= LIMIT; i++)) ; do
     FILEPATH_i="${files[$i]}"
 
     echo "[triggerEmulation] Setting up configuration for file $i..."
-    echo "[triggerEmulation] filename is $FILENAME_i"
+    echo "[triggerEmulation] filename is $FILEPATH_i"
 
     echo "hltGetConfiguration $TRIGGERMENU --globaltag $GLOBALTAG --l1Xml $L1MENU --l1-emulator $L1EMULATOR --era $ERA --input $FILEPATH_i --process MyHLT --full --mc --unprescale --no-output --max-events -1" &> myGets/myGet_$i.txt
 
