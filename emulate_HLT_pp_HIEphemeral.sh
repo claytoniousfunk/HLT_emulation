@@ -37,7 +37,7 @@ mkdir logs
 
 for((i=1; i <= LIMIT; i++)) ; do
 
-    FILEPATH_i="${files[$i]}"
+    FILEPATH_i=${files[$i]}
 
     echo "[triggerEmulation] Setting up configuration for file $i..."
     echo "[triggerEmulation] filename is $FILEPATH_i"
