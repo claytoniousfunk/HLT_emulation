@@ -36,7 +36,7 @@ mkdir openHLTfiles
 mkdir logs
 
 #for((i=1; i <= LIMIT; i++)) ; do
-for value in "${files[@]}"
+for value in "${files[@]}"; do
 
     FILEPATH_i="$value"
 
