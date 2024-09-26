@@ -7,7 +7,7 @@ L1EMULATOR="uGT"
 ERA="Run3"
 
 
-files=("file:/eos/cms/store/group/phys_heavyions/soohwan/Run3_2024/ppRef_2023/01db808b-05aa-4596-b193-b9c610fc4841.root"
+files=("/store/data/Run2023F/PPRefZeroBias0/RAW/v1/000/373/710/00000/0030cd7f-4667-4732-b98c-defe04d2064a.root"
        )
 
 
