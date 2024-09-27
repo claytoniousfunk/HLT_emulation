@@ -7,7 +7,7 @@ L1EMULATOR="uGT"
 ERA="Run3"
 
 
-files=("/store/data/Run2023F/PPRefZeroBias0/RAW/v1/000/373/710/00000/023b8d95-506c-4418-9f08-b5f8f765e3b1.root"
+files=("/store/data/Run2023F/PPRefZeroBias0/RAW/v1/000/373/710/00000/027f7804-25f2-4a38-82c7-b73ffbb0221c.root"
        )
 
 
