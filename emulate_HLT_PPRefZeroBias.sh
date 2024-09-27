@@ -569,16 +569,15 @@ for value in "${files[@]}"; do
     OUTPUT_i+="$FILESUFFIX_i"
 
     echo "[triggerEmulation] output name = $OUTPUT_i"
-
     
     echo "[triggerEmulation] Setting up configuration for file $i..."
     
-
     echo "hltGetConfiguration $TRIGGERMENU --globaltag $GLOBALTAG --l1Xml $L1MENU --l1-emulator $L1EMULATOR --era $ERA --input $FILEPATH_i --process MyHLT --full --mc --unprescale --no-output --max-events -1" &> myGets/myGet_$i.txt
 
     ./setup_hltConfig.sh . myGets/myGet_$i.txt
 
-    cmsRun test_pset.py 2>&1 | tee logs/log_$i.txt
+    #cmsRun test_pset.py 2>&1 | tee logs/log_$i.txt
+    cmsRun test_pset.py
     
     echo '
 import FWCore.ParameterSet.Config as cms
@@ -606,9 +605,10 @@ process.hltAnalysis = cms.EndPath(process.hltanalysis + process.hltobject)
 process.TFileService = cms.Service("TFileService", fileName=cms.string("openHLT.root"))
 ' &> Macro.py
 
-    cmsRun Macro.py 2>&1 | tee macroLogs/macrolog_$i.txt
+    #cmsRun Macro.py 2>&1 | tee macroLogs/macrolog_$i.txt
+    cmsRun Macro.py
 
-    cp openHLT.root openHLTfiles/openHLT_$i.root
+    cp openHLT.root openHLTfiles/$OUTPUT_i
 
     rm ./*.root ./*.py 
     
