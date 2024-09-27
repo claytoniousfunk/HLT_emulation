@@ -565,8 +565,10 @@ for value in "${files[@]}"; do
     fi
 
     FILESUFFIX_i="${FILEPATH_i:85}"
+    OUTPUT_i="openHLT_"
+    OUTPUT_i+="$FILESUFFIX_i"
 
-    echo "[triggerEmulation] filename suffix is $FILESUFFIX_i"
+    echo "[triggerEmulation] output name = $OUTPUT_i"
 
     
     echo "[triggerEmulation] Setting up configuration for file $i..."
