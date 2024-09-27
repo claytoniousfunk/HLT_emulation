@@ -564,6 +564,10 @@ for value in "${files[@]}"; do
 	continue 
     fi
 
+    FILESUFFIX_i="${FILEPATH_i:85}"
+
+    echo "[triggerEmulation] filename suffix is $FILESUFFIX_i"
+
     
     echo "[triggerEmulation] Setting up configuration for file $i..."
     
