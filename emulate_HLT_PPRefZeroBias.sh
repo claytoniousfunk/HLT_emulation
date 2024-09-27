@@ -555,7 +555,14 @@ for value in "${files[@]}"; do
 
     RUN_i="$(dasgoclient -query="run file=$FILEPATH_i")"
 
-    echo "[triggerEmulation] Run = $RUN_i"
+    echo "[triggerEmulation] Run = $RUN_i, papers please..."
+
+    if [ "$RUN_i" == "373710" ]; then
+	echo "[triggerEmulation] Your papers check out...carry on citizen"
+    else
+	echo "[triggerEmulation] There is a problem...come with us"
+	continue 
+    fi
 
     
     echo "[triggerEmulation] Setting up configuration for file $i..."
