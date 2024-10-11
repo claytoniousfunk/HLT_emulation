@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TRIGGERMENU="/users/cbennett/140X/HLT_PbPb_140X/V1"
+TRIGGERMENU="/users/cbennett/140X/HLT_PbPb_140X_integratedMenu/V3"
 GLOBALTAG="140X_dataRun3_HLT_v3"
 L1MENU="L1Menu_CollisionsHeavyIons2023_v1_1_5.xml"
 L1EMULATOR="uGT"
