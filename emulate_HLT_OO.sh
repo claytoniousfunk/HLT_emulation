@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TRIGGERMENU="/users/cbennett/150X/HLT_OO_5p36TeV_jetTriggers/V3"
+TRIGGERMENU="/users/cbennett/150X/HLT_OO_5p36TeV_jetTriggers/V2"
 GLOBALTAG="150X_mcRun3_2025_forOO_realistic_v1"
 L1MENU="L1Menu_CollisionsSmallSystems2025_v1_0_4-d1.xml"
 L1EMULATOR="uGT"
@@ -60,7 +60,7 @@ for value in "${files[@]}"; do
     # fi
 
     #FILESUFFIX_i="${FILEPATH_i:85}"
-    FILESUFFIX_i="$i"
+    FILESUFFIX_i="$i.root"
     OUTPUT_i="openHLT_"
     OUTPUT_i+="$FILESUFFIX_i"
 
