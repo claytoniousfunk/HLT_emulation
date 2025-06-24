@@ -12,13 +12,13 @@ files=("/store/user/fdamas/HLT/Oxygen2025/1506patch1MC/Dijets_pTHatMin15GeV_Hiji
 
 
 
-echo "[triggerEmulation] ######## SETTINGS ########"
-echo "[triggerEmulation] pp trigger menu = $TRIGGERMENU"
+echo "[triggerEmulation] ################ SETTINGS ################"
+echo "[triggerEmulation] .... trigger menu = $TRIGGERMENU"
 echo "[triggerEmulation] .... global tag   = $GLOBALTAG"
 echo "[triggerEmulation] .... L1 menu      = $L1MENU"
 echo "[triggerEmulation] .... L1 emulator  = $L1EMULATOR"
 echo "[triggerEmulation] .... era          = $ERA"
-echo "[triggerEmulation] ##########################"
+echo "[triggerEmulation] ##########################################"
 
 #LIMIT=100
 #LIMIT=1 # for testing
