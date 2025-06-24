@@ -2,7 +2,7 @@
 
 TRIGGERMENU="/users/cbennett/150X/HLT_OO_5p36TeV_jetTriggers/V2"
 GLOBALTAG="150X_mcRun3_2025_forOO_realistic_v1"
-L1MENU="L1Menu_CollisionsSmallSystems2025_v1_0_4-d1.xml"
+L1MENU="L1Menu_CollisionsSmallSystems2025_v1_0_4.xml"
 L1EMULATOR="uGT"
 ERA="Run3_pp_on_PbPb_2025"
 
