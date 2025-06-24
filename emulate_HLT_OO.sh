@@ -59,7 +59,8 @@ for value in "${files[@]}"; do
     # 	continue 
     # fi
 
-    FILESUFFIX_i="${FILEPATH_i:85}"
+    #FILESUFFIX_i="${FILEPATH_i:85}"
+    FILESUFFIX_i="$i"
     OUTPUT_i="openHLT_"
     OUTPUT_i+="$FILESUFFIX_i"
 
