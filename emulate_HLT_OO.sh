@@ -4,7 +4,7 @@ TRIGGERMENU="/users/cbennett/150X/HLT_OO_5p36TeV_jetTriggers/V4"
 GLOBALTAG="150X_mcRun3_2025_forOO_realistic_v1"
 L1MENU="L1Menu_CollisionsSmallSystems2025_v1_0_4.xml"
 L1EMULATOR="uGT"
-ERA="Run3_pp_on_PbPb_2025"
+ERA="Run3_2025_OXY"
 FILELIST="filenames_Hijing_DiJet_00_5p36TeV.txt"
 
 files=("/store/user/fdamas/HLT/Oxygen2025/1506patch1MC/Dijets_pTHatMin15GeV_HijingEmbedded_OO5p36TeV_1506patch1_Nominal2025OOCollision/DIGIRAWHLT_PRef_150X_mcRun3_2025_forOO_realistic_v1_31May2025/250531_121756/0000/step2_DIGI_L1_DIGI2RAW_HLT_PU_350.root"
