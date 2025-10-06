@@ -1,0 +1,42 @@
+#!/bin/bash
+shopt -s expand_aliases
+
+export SCRAM_ARCH=el9_amd64_gcc12 # ensure you use the right arch
+#CMSSWV="CMSSW_14_0_0_pre3" 
+CMSSWV="${1:-CMSSW_15_0_6_patch1}" 
+/cvmfs/cms.cern.ch/common/scramv1 project CMSSW $CMSSWV # cmsrel $CMSSWV
+cd $CMSSWV/src
+eval `/cvmfs/cms.cern.ch/common/scram runtime -sh` # cmsenv
+
+git cms-init
+
+# For HLT analyzers
+git cms-addpkg HLTrigger/Configuration
+git cms-addpkg L1Trigger/L1TGlobal
+mkdir -p L1Trigger/L1TGlobal/data/Luminosity/startup/ && cd L1Trigger/L1TGlobal/data/Luminosity/startup/
+#git checkout L1Trigger/L1TGlobal/data
+
+#wget https://raw.githubusercontent.com/Cristian-Baldenegro/HIMenus/refs/heads/main/Menus/L1Menu_CollisionsSmallSystems2025_v1_0_1.xml
+#wget https://raw.githubusercontent.com/Cristian-Baldenegro/HIMenus/refs/heads/main/Menus/L1Menu_CollisionsSmallSystems2025_v1_0_2_draft.xml
+wget https://raw.githubusercontent.com/Cristian-Baldenegro/HIMenus/refs/heads/main/Menus/L1Menu_CollisionsSmallSystems2025_v1_0_4.xml
+#wget https://raw.githubusercontent.com/mitaylor/HIMenus/main/Menus/L1Menu_CollisionsPPRef2024_v0_0_0.xml
+#wget https://raw.githubusercontent.com/mitaylor/HIMenus/main/Menus/L1Menu_CollisionsHeavyIons2023_v1_1_5.xml
+
+cd $CMSSW_BASE/src
+
+#git cms-addpkg HLTrigger/HLTanalyzers
+
+#git cms-merge-topic silviodonato:customizeHLTFor2023
+
+# Build
+
+git clone git@github.com:vince502/HLTBitAna.git HeavyIonsAnalysis/
+scram b -j 4
+
+cd HLTrigger/Configuration/test && mkdir workstation && cd workstation
+
+ln -s /afs/cern.ch/work/s/soohwan/public/hltGetFiles
+cp /afs/cern.ch/work/s/soohwan/public/HLTBitAna_config_tmpl.py .
+
+cd $CMSSW_BASE/src;
+ln -s $CMSSW_BASE/src/HLTrigger/Configuration/test/workstation

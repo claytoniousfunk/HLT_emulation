@@ -1,6 +1,7 @@
 #!/bin/bash
 
-TRIGGERMENU="/users/cbennett/151X/HLT_jetTriggers_HIon_2025/V5"
+TRIGGERMENU="/users/cbennett/151X/HLT_jetTriggers_HIon_2025/V7"
+#TRIGGERMENU="/dev/CMSSW_15_1_0/HIon/V8"
 GLOBALTAG="151X_mcRun3_2025_realistic_HI_v1"
 L1MENU="L1Menu_CollisionsHeavyIons2025_v1_0_1.xml"
 L1EMULATOR="uGT"
@@ -57,8 +58,7 @@ for value in "${files[@]}"; do
     # 	continue 
     # fi
 
-    FILESUFFIX_i="${FILEPATH_i:238}"
-    #FILESUFFIX_i="$i.root"
+    FILESUFFIX_i="$i.root"
     OUTPUT_i="openHLT_"
     OUTPUT_i+="$FILESUFFIX_i"
 
@@ -104,7 +104,7 @@ process.TFileService = cms.Service("TFileService", fileName=cms.string("openHLT.
 
     cp openHLT.root openHLTfiles/$OUTPUT_i
 
-    rm ./*.root ./*.py 
+    #rm ./*.root ./*.py 
     
 
 done
