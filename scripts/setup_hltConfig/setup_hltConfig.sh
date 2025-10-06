@@ -5,7 +5,7 @@ SCRAM_ARCH=el8_amd64_gcc11
 cd $1
 eval `/cvmfs/cms.cern.ch/common/scram runtime -sh`
 
-cd $CMSSW_BASE/src/HLTrigger/Configuration/test/workstation
+#cd $CMSSW_BASE/src/HLTrigger/Configuration/test/workstation
 
 #wget https://adiflori.web.cern.ch/adiflori/hlt_hion.py
 #cp hlt_hion.py test_pset.py

@@ -68,7 +68,7 @@ for value in "${files[@]}"; do
     
     echo "hltGetConfiguration $TRIGGERMENU --globaltag $GLOBALTAG --l1Xml $L1MENU --l1-emulator $L1EMULATOR --era $ERA --input $FILEPATH_i --process MyHLT --full --mc --unprescale --no-output --max-events -1" &> myGets/myGet_$i.txt
 
-    ./setup_hltConfig.sh . myGets/myGet_$i.txt
+    ../setup_hltConfig/setup_hltConfig.sh . myGets/myGet_$i.txt
 
     cmsRun test_pset.py 2>&1 | tee logs/log_$i.txt
     #cmsRun test_pset.py
