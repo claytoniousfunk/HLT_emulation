@@ -578,7 +578,7 @@ process.TFileService = cms.Service("TFileService", fileName=cms.string("openHLT.
 
     cp openHLT.root openHLTfiles/$OUTPUT_i
 
-    #rm ./*.root ./*.py 
+    rm ./*.root ./*.py 
     
 
 done
