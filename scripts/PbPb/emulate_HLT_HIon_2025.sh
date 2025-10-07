@@ -557,7 +557,7 @@ process.source = cms.Source("PoolSource", fileNames = cms.untracked.vstring("fil
 
 process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_cff")
 from Configuration.AlCa.GlobalTag import GlobalTag
-process.GlobalTag = GlobalTag(process.GlobalTag, "", "")
+process.GlobalTag = GlobalTag(process.GlobalTag, "151X_mcRun3_2025_realistic_HI_v1", "")
 
 # add HLTBitAnalyzer
 process.load("HeavyIonsAnalysis.EventAnalysis.hltanalysis_cfi")
