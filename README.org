@@ -9,11 +9,11 @@ Relevant variables to edit:
 
 | variable        | default                                                                                                                                            |
 |-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------|
-| ~TRIGGERMENU~   | /users/cbennett/151X/HLT_jetTriggers_HIon_2025/V7                                                                                                  |
-| ~GLOBALTAG~     | 151X_mcRun3_2025_realistic_HI_v1                                                                                                                   |
-| ~L1MENU~        | L1Menu_CollisionsHeavyIons2025_v1_0_1.xml                                                                                                          |
-| ~ERA~           | Run3_pp_on_PbPb_2025                                                                                                                               |
-| ~INPUT_DATASET~ | /Dijet_pTHatMin15_HydjetEmbedded_Pythia8_TuneCP5_1510pre6/fdamas-DIGIRAWHLT_151X_mcRun3_2025_realistic_HI_v1-cbd44d18142345ebc4de72df33778d6f/USER |
+| ~TRIGGERMENU~   | ~/users/cbennett/151X/HLT_jetTriggers_HIon_2025/V7~                                                                                                |
+| ~GLOBALTAG~     | ~151X_mcRun3_2025_realistic_HI_v1~                                                                                                                 |
+| ~L1MENU~        | ~L1Menu_CollisionsHeavyIons2025_v1_0_1.xml~                                                                                                        |
+| ~ERA~           | ~Run3_pp_on_PbPb_2025~                                                                                                                             |
+| ~INPUT_DATASET~ | ~/Dijet_pTHatMin15_HydjetEmbedded_Pythia8_TuneCP5_1510pre6/fdamas-DIGIRAWHLT_151X_mcRun3_2025_realistic_HI_v1-cbd44d18142345ebc4de72df33778d6f/USER~ |
 |                 |                                                                                                                                                    |
 
 * Instructions
