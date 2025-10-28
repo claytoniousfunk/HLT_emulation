@@ -1,7 +1,25 @@
 #!/bin/bash
 
-#TRIGGERMENU="/users/cbennett/151X/HLT_jetTriggers_HIon_2025/V7"
-TRIGGERMENU="/users/cbennett/132X/HLT_HION_CsJetTriggerImport/V2"
+set -euo pipefail
+
+# Check that exactly 2 arguments are provided
+if [[ $# -ne 2 ]]; then
+    echo "Usage: $0 <start_index> <end_index>"
+    exit 1
+fi
+
+START_IDX=$1
+END_IDX=$2
+
+if ! [[ "$START_IDX" =~ ^[0-9]+$ ]] || ! [[ "$END_IDX" =~ ^[0-9]+$ ]]; then
+    echo "Error: start and end indices must be integers."
+    exit 1
+fi
+
+
+
+TRIGGERMENU="/users/cbennett/151X/HLT_jetTriggers_HIon_2025/V7"
+#TRIGGERMENU="/users/cbennett/132X/HLT_HION_CsJetTriggerImport/V2"
 GLOBALTAG="151X_mcRun3_2025_realistic_HI_v1"
 L1MENU="L1Menu_CollisionsHeavyIons2025_v1_0_1.xml"
 L1EMULATOR="uGT"
@@ -53,31 +71,25 @@ else
     echo "openHLTfiles already exists."
 fi
 
-
+# Validate indices
+NUM_FILES=${#files[@]}
+if (( START_IDX < 0 || END_IDX >= NUM_FILES || START_IDX > END_IDX )); then
+    echo "Error: indices out of range (0 - $((NUM_FILES-1)))."
+    exit 1
+fi
 
 i=0
 
-
 #for((i=1; i <= LIMIT; i++)) ; do
-for value in "${files[@]}"; do
+#for value in "${files[@]}"; do
+for ((i=START_IDX; i<=END_IDX; i++)); do
 
-    let "i=i+1"
-    FILEPATH_i="$value"
+    FILEPATH_i="${files[i]}"
+
+    #let "i=i+1"
+    #FILEPATH_i="$value"
 
     echo "[triggerEmulation] filename is $FILEPATH_i"
-
-    echo "[triggerEmulation] Checking run number for file..."
-
-    # RUN_i="$(dasgoclient -query="run file=$FILEPATH_i")"
-
-    # echo "[triggerEmulation] Run = $RUN_i, papers please..."
-
-    # if [ "$RUN_i" == "373710" ]; then
-    # 	echo "[triggerEmulation] Your papers check out...carry on citizen"
-    # else
-    # 	echo "[triggerEmulation] There is a problem...come with us"
-    # 	continue 
-    # fi
 
     FILESUFFIX_i="$i.root"
     OUTPUT_i="openHLT_"
