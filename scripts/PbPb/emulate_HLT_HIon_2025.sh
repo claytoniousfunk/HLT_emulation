@@ -106,31 +106,31 @@ for ((i=START_IDX; i<=END_IDX; i++)); do
     cmsRun test_pset.py 2>&1 | tee logs/log_$i.txt
     #cmsRun test_pset.py
     
-    echo '
+    echo "
 import FWCore.ParameterSet.Config as cms
-process = cms.Process("HLTANA")
+process = cms.Process(\"HLTANA\")
 
 # Input source
 process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(-1))
-process.source = cms.Source("PoolSource", fileNames = cms.untracked.vstring("file:output_130.root"))
+process.source = cms.Source(\"PoolSource\", fileNames = cms.untracked.vstring(\"file:output_130.root\"))
 
-process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_cff")
+process.load(\"Configuration.StandardSequences.FrontierConditions_GlobalTag_cff\")
 from Configuration.AlCa.GlobalTag import GlobalTag
-process.GlobalTag = GlobalTag(process.GlobalTag, "151X_mcRun3_2025_realistic_HI_v1", "")
+process.GlobalTag = GlobalTag(process.GlobalTag, \"$GLOBALTAG\", \"\")
 
 # add HLTBitAnalyzer
-process.load("HeavyIonsAnalysis.EventAnalysis.hltanalysis_cfi")
-process.hltanalysis.hltResults = cms.InputTag("TriggerResults::MyHLT")
-process.hltanalysis.l1tAlgBlkInputTag = cms.InputTag("hltGtStage2Digis::MyHLT")
-process.hltanalysis.l1tExtBlkInputTag = cms.InputTag("hltGtStage2Digis::MyHLT")
+process.load(\"HeavyIonsAnalysis.EventAnalysis.hltanalysis_cfi\")
+process.hltanalysis.hltResults = cms.InputTag(\"TriggerResults::MyHLT\")
+process.hltanalysis.l1tAlgBlkInputTag = cms.InputTag(\"hltGtStage2Digis::MyHLT\")
+process.hltanalysis.l1tExtBlkInputTag = cms.InputTag(\"hltGtStage2Digis::MyHLT\")
 
-process.load("HeavyIonsAnalysis.EventAnalysis.hltobject_cfi")
-process.hltobject.triggerResults = cms.InputTag("TriggerResults::MyHLT")
-process.hltobject.triggerEvent = cms.InputTag("hltTriggerSummaryAOD::MyHLT")
+process.load(\"HeavyIonsAnalysis.EventAnalysis.hltobject_cfi\")
+process.hltobject.triggerResults = cms.InputTag(\"TriggerResults::MyHLT\")
+process.hltobject.triggerEvent = cms.InputTag(\"hltTriggerSummaryAOD::MyHLT\")
 
 process.hltAnalysis = cms.EndPath(process.hltanalysis + process.hltobject)
-process.TFileService = cms.Service("TFileService", fileName=cms.string("openHLT.root"))
-' &> Macro.py
+process.TFileService = cms.Service(\"TFileService\", fileName=cms.string(\"openHLT.root\"))
+" &> Macro.py
 
     cmsRun Macro.py 2>&1 | tee macroLogs/macrolog_$i.txt
     #cmsRun Macro.py
