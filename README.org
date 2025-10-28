@@ -1,5 +1,10 @@
 #+title: HLT emulation
 
+
+* About
+
+When conducting trigger studies, we are often working with development menus that contain trigger paths not included in the official menus.  These development menus will not be processed by default in the foresting process, which only processes the official HLT working menu.  Thus we must run HLT emulation, which inputs DIGIRAW data and processes custom HLT paths.  With the code in this repo, one can input an HLT trigger path and dataset and process the HLT trigger decisions, which can then be used in efficiency studies.
+
 * Instructions
 
 Retrieve the ~setup_CMSSW.sh~ script to configure working environment:
@@ -40,3 +45,6 @@ Run the emulation script:
   ./emulate_HLT_HIon_2025.sh 1 2
 #+end_src
 
+The arguments ~1~ and ~2~ indicate the ~start_index~ and ~end_index~ of the input file list.
+
+The output will be a file named ~openHLT_i.root~ where ~i={1,2,...,N}~ is the index corresponding to an input file on the file list.  This ~openHLT_i.root~ file contains the HLT trigger decisions for the processed events.
