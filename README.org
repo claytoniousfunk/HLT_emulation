@@ -5,6 +5,17 @@
 
 When conducting trigger studies, we are often working with development menus that contain trigger paths not included in the official menus.  These development menus will not be processed by default in the foresting process, which only processes the official HLT working menu.  Thus we must run HLT emulation, which inputs DIGIRAW data and processes custom HLT paths.  With the code in this repo, one can input an HLT trigger path and dataset and process the HLT trigger decisions, which can then be used in efficiency studies.
 
+Relevant variables to edit:
+
+| variable        | default                                                                                                                                            |
+|-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------|
+| ~TRIGGERMENU~   | /users/cbennett/151X/HLT_jetTriggers_HIon_2025/V7                                                                                                  |
+| ~GLOBALTAG~     | 151X_mcRun3_2025_realistic_HI_v1                                                                                                                   |
+| ~L1MENU~        | L1Menu_CollisionsHeavyIons2025_v1_0_1.xml                                                                                                          |
+| ~ERA~           | Run3_pp_on_PbPb_2025                                                                                                                               |
+| ~INPUT_DATASET~ | /Dijet_pTHatMin15_HydjetEmbedded_Pythia8_TuneCP5_1510pre6/fdamas-DIGIRAWHLT_151X_mcRun3_2025_realistic_HI_v1-cbd44d18142345ebc4de72df33778d6f/USER |
+|                 |                                                                                                                                                    |
+
 * Instructions
 
 Retrieve the ~setup_CMSSW.sh~ script to configure working environment:
