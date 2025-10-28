@@ -11,7 +11,9 @@ INPUT_DATASET="/Dijet_pTHatMin15_HydjetEmbedded_Pythia8_TuneCP5_1510pre6/fdamas-
 INPUT_INSTANCE="/prod/phys03"
 
 filename_list="fileNames.txt"
-if [[ -f "$filename_list" ]] || touch "$filename_list"
+if [[ -f "$filename_list" ]]; then
+    touch "$filename_list"
+fi
 
 echo "retrieving list of files from dataset $INPUT_DATASET"
 dasgoclient -query="file dataset=$INPUT_DATASET instance=$INPUT_INSTANCE" &> "$filename_list"
