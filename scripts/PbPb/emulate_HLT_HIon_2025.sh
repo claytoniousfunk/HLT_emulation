@@ -1,7 +1,7 @@
 #!/bin/bash
 
-TRIGGERMENU="/users/cbennett/151X/HLT_jetTriggers_HIon_2025/V7"
-#TRIGGERMENU="/dev/CMSSW_15_1_0/HIon/V8"
+#TRIGGERMENU="/users/cbennett/151X/HLT_jetTriggers_HIon_2025/V7"
+TRIGGERMENU="/users/cbennett/132X/HLT_HION_CsJetTriggerImport/V2"
 GLOBALTAG="151X_mcRun3_2025_realistic_HI_v1"
 L1MENU="L1Menu_CollisionsHeavyIons2025_v1_0_1.xml"
 L1EMULATOR="uGT"
@@ -36,26 +36,15 @@ echo "number of files to emulate : $LIMIT"
 
 
 read -p "Clear log directories? (y/n): " answer
-
 # Normalize input to lowercase
 answer=${answer,,}
-
 if [[ "$answer" == "y" || "$answer" == "yes" ]]; then
-    rm -r macroLogs
-    rm -rf myGets
-    rm -rf logs
-    mkdir macroLogs
-    mkdir myGets
-    mkdir logs
+    rm -rf macroLogs myGets logs
+    mkdir macroLogs myGets logs
     echo "Directories cleared."
 else
     echo "Aborted."
 fi
-
-
-
-
-
 
 if [[ ! -d "openHLTfiles" ]]; then
     mkdir openHLTfiles
