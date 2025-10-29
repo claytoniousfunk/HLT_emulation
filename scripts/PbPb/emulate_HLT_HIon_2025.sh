@@ -141,7 +141,7 @@ process.TFileService = cms.Service(\"TFileService\", fileName=cms.string(\"openH
     cmsRun Macro.py 2>&1 | tee macroLogs/macrolog_$i.txt
     #cmsRun Macro.py
 
-    cp openHLT.root openHLTfiles/$OUTPUT_i
+    cp openHLT.root /eos/cms/store/group/phys_heavyions/cbennett/openHLT_HIon_2025-10-29/$OUTPUT_i
 
     rm ./*.root ./*.py 
     
