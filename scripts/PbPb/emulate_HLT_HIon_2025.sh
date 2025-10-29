@@ -18,8 +18,7 @@ fi
 
 
 
-TRIGGERMENU="/users/cbennett/151X/HLT_jetTriggers_HIon_2025/V7"
-#TRIGGERMENU="/users/cbennett/132X/HLT_HION_CsJetTriggerImport/V2"
+TRIGGERMENU="/users/cbennett/151X/HLT_jetTriggers_HIon_2025/V8"
 GLOBALTAG="151X_mcRun3_2025_realistic_HI_v1"
 L1MENU="L1Menu_CollisionsHeavyIons2025_v1_0_1.xml"
 L1EMULATOR="uGT"
