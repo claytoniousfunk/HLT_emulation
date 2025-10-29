@@ -41,7 +41,7 @@ dasgoclient -query="file dataset=$INPUT_DATASET instance=$INPUT_INSTANCE" &> "$f
 # add specific xrootd prefix
 awk '{print "root://cmsxrootd.fnal.gov/" $0}' "$filename_list" > "$prefixed_filename_list"
 
-mapfile -t files < "$filename_list"
+mapfile -t files < "$prefixed_filename_list"
 
 echo "################  SETTINGS  #######################################"
 echo ".... trigger menu = $TRIGGERMENU"
