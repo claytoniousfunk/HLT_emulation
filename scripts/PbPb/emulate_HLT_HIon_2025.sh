@@ -109,8 +109,8 @@ for ((i=START_IDX; i<=END_IDX; i++)); do
 
     ../setup_hltConfig/setup_hltConfig.sh . myGets/myGet_$i.txt
 
-    cmsRun test_pset.py 2>&1 | tee logs/log_$i.txt
-    #cmsRun test_pset.py
+    #cmsRun test_pset.py 2>&1 | tee logs/log_$i.txt
+    cmsRun test_pset.py
     
     echo "
 import FWCore.ParameterSet.Config as cms
@@ -138,8 +138,8 @@ process.hltAnalysis = cms.EndPath(process.hltanalysis + process.hltobject)
 process.TFileService = cms.Service(\"TFileService\", fileName=cms.string(\"openHLT.root\"))
 " &> Macro.py
 
-    cmsRun Macro.py 2>&1 | tee macroLogs/macrolog_$i.txt
-    #cmsRun Macro.py
+    #cmsRun Macro.py 2>&1 | tee macroLogs/macrolog_$i.txt
+    cmsRun Macro.py
 
     cp openHLT.root /eos/cms/store/group/phys_heavyions/cbennett/openHLT_HIon_2025-10-29/$OUTPUT_i
 
