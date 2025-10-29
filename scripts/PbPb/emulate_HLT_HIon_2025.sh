@@ -39,7 +39,7 @@ echo "retrieving list of files from dataset $INPUT_DATASET"
 dasgoclient -query="file dataset=$INPUT_DATASET instance=$INPUT_INSTANCE" &> "$filename_list"
 
 # add specific xrootd prefix
-awk '{print "root://cmsxrootd.fnal.gov/" $0}' "$filename_list" > "$prefixed_filename_list"
+awk '{print "root://xrootd-cms.infn.it/" $0}' "$filename_list" > "$prefixed_filename_list"
 
 mapfile -t files < "$prefixed_filename_list"
 
